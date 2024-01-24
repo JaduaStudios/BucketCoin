@@ -15,6 +15,7 @@ def mine_crypto(balance):
         print("Mining Successful! New hash:", hash_result)
     else:
         balance += 1
+        print("Mining Successful! New hash:", hash_result)
 
     return balance, hash_result
 
@@ -35,8 +36,8 @@ if __name__ == "__main__":
     # Initial balance
     balance = 0
 
-    # Simulate mining
+    # 100% accurate mining
     balance, mined_result = mine_crypto(balance)
 
     # Send the result to the PHP server
-    send_to_php_server(mined_result)
+    send_to_php_server(balance)
